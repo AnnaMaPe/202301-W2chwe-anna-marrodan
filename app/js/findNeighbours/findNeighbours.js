@@ -1,10 +1,4 @@
-const board = [
-  ["", "X", ""],
-  ["", "", ""],
-  ["", "", "X"],
-];
-
-const findNeighbours = () => {
+const findNeighbours = (board) => {
   const neighbourCoordenates = [];
 
   board.forEach((row, index) => {
