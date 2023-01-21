@@ -1,12 +1,11 @@
 import findNeighbours from "./findNeighbours/findNeighbours.js";
 import createBoard from "./createBoard/createBoard.js";
+import addFirstCell from "./addFirstCell/addFirstCell.js";
 
-console.table(createBoard(3, 2));
+const boardWidth = 3;
+const boardHeight = 3;
 
-const board = [
-  ["", "X", ""],
-  ["", "", ""],
-  ["", "", "X"],
-];
+const board = createBoard(boardWidth, boardHeight);
 
+addFirstCell(board);
 findNeighbours(board);
