@@ -2,9 +2,11 @@
   "name": "202301-w2chwe-anna-marrodan",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/app/js/index.js",
+  "type": "module",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest",
+    "test:dev": "jest --watchAll",
     "prepare": "husky install"
   },
   "keywords": [],
