@@ -1,11 +1,17 @@
-import findNeighbours from "./findNeighbours/findNeighbours.js";
+import countAliveNeighbours from "./countAliveNeighbours/countAliveNeighbours.js";
 import createBoard from "./createBoard/createBoard.js";
-import addFirstCell from "./addFirstCell/addFirstCell.js";
 
-const boardWidth = 3;
-const boardHeight = 3;
+import startRandomGame from "./startRandomGame/startRandomGame.js";
 
-const board = createBoard(boardWidth, boardHeight);
+const boardWidth = 10;
+const boardHeight = 10;
+const positionCellColumn = 1;
+const positionCellRow = 1;
 
-addFirstCell(board);
-findNeighbours(board);
+const emptyBoard = createBoard(boardWidth, boardHeight);
+
+const board = startRandomGame(emptyBoard, boardWidth, boardHeight);
+
+console.table(board);
+
+countAliveNeighbours(board, positionCellColumn, positionCellRow);
