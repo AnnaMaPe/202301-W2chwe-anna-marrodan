@@ -1,11 +1,14 @@
-import findNeighbours from "./findNeighbours/findNeighbours.js";
+import countAliveNeighbours from "./countAliveNeighbours/countAliveNeighbours.js";
 import createBoard from "./createBoard/createBoard.js";
-import addFirstCell from "./addFirstCell/addFirstCell.js";
+// Import addFirstCell from "./addFirstCell/addFirstCell.js";
+import startRandomGame from "./startRandomGame/startRandomGame.js";
 
-const boardWidth = 3;
-const boardHeight = 3;
+const boardWidth = 10;
+const boardHeight = 10;
 
 const board = createBoard(boardWidth, boardHeight);
 
-addFirstCell(board);
-findNeighbours(board);
+console.table(startRandomGame(board, boardWidth, boardHeight));
+
+// AddFirstCell(board);
+// findNeighbours(board);
